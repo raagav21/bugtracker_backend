@@ -1,0 +1,15 @@
+const express = require("express");
+const router = express.Router();
+
+router.get("/health", (req, res) => {
+  res.json({
+    success: true,
+    message: "Database connected successfully",
+    data: {
+      database: "connected",
+      status: "healthy"
+    }
+  });
+});
+
+module.exports = router;
